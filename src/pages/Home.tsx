@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useGame } from '../hooks/useGame';
 import { GameBoard } from '../components/GameBoard';
 import { ScorePanel } from '../components/ScorePanel';
@@ -24,9 +25,15 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 flex flex-col items-center justify-center p-4">
-      <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center">
+      <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
         <span className="text-cyan-400">俄罗斯</span>方块
       </h1>
+      <Link 
+        to="/spring" 
+        className="mb-4 px-6 py-2 bg-green-600 hover:bg-green-500 text-white rounded-lg transition-colors"
+      >
+        🌸 查看春天图片 🌸
+      </Link>
       
       <div className="flex flex-col lg:flex-row gap-6 items-center lg:items-start">
         <div className="flex flex-col md:flex-row gap-6 items-center">
