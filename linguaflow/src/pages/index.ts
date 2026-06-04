@@ -1,0 +1,10 @@
+export { default as DashboardPage } from './DashboardPage';
+export { default as CoursesPage } from './CoursesPage';
+export { default as CourseDetailPage } from './CourseDetailPage';
+export { default as LearningPage } from './LearningPage';
+export { default as ProgressPage } from './ProgressPage';
+export { default as AchievementsPage } from './AchievementsPage';
+export { default as ProfilePage } from './ProfilePage';
+export { default as CommunityPage } from './CommunityPage';
+export { default as LoginPage } from './LoginPage';
+export { default as RegisterPage } from './RegisterPage';

@@ -162,7 +162,7 @@ export const useLearningStore = create<LearningStore>((set, get) => ({
   },
 
   recordAnswer: (correct: boolean) => {
-    const { sessionCorrect, sessionTotal, sessionXpEarned, currentLesson } = get();
+    const { sessionCorrect, sessionTotal, sessionXpEarned } = get();
     set({
       sessionCorrect: correct ? sessionCorrect + 1 : sessionCorrect,
       sessionTotal: sessionTotal + 1,

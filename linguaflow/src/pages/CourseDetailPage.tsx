@@ -7,22 +7,11 @@ import {
   BookOpen,
   CheckCircle,
   PlayCircle,
-  Volume2,
-  FileText,
-  Mic,
-  Headphones
+  Volume2
 } from 'lucide-react';
 import { Card, LanguageBadge, LevelBadge } from '../components/common';
 import { useCourseStore, useLearningStore } from '../stores';
-import { languageNames } from '../data/mockData';
 import type { LessonType } from '../types';
-
-const lessonTypeIcons: Record<LessonType, typeof BookOpen> = {
-  vocabulary: BookOpen,
-  grammar: FileText,
-  speaking: Mic,
-  listening: Headphones
-};
 
 const lessonTypeLabels: Record<LessonType, string> = {
   vocabulary: '单词',
@@ -179,10 +168,9 @@ export default function CourseDetailPage() {
 
           <div className="space-y-3">
             {course.lessons.map((lesson, index) => {
-              const Icon = lessonTypeIcons[lesson.type];
-              return (
-                <motion.div key={lesson.id} variants={itemVariants}>
-                  <Card
+                return (
+                  <motion.div key={lesson.id} variants={itemVariants}>
+                    <Card
                     hover
                     onClick={() => handleStartLesson(lesson)}
                     className="p-4 cursor-pointer"

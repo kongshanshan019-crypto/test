@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import {
   Home,
   BookOpen,
-  GraduationCap,
   BarChart3,
   Award,
   Users,

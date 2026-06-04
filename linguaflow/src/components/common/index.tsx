@@ -110,13 +110,13 @@ interface LanguageBadgeProps {
   size?: 'sm' | 'md';
 }
 
-const languageConfig = {
+const languageConfig: Record<string, { label: string; color: string; flag: string }> = {
   en: { label: '英语', color: 'bg-blue-500/20 text-blue-400', flag: '🇬🇧' },
   ja: { label: '日语', color: 'bg-pink-500/20 text-pink-400', flag: '🇯🇵' },
   ko: { label: '韩语', color: 'bg-purple-500/20 text-purple-400', flag: '🇰🇷' },
 };
 
-export function LanguageBadge({ language, size = 'sm' }: LanguageBadge) {
+export function LanguageBadge({ language, size = 'sm' }: LanguageBadgeProps) {
   const config = languageConfig[language];
   return (
     <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-lg ${config.color} ${size === 'sm' ? 'text-xs' : 'text-sm'}`}>

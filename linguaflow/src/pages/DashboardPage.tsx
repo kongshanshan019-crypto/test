@@ -7,13 +7,11 @@ import {
   Mic,
   Trophy,
   Target,
-  Clock,
-  TrendingUp,
   ChevronRight,
   Sparkles
 } from 'lucide-react';
 import { Card, ProgressRing, StatCard, LanguageBadge, LevelBadge } from '../components/common';
-import { useUserStore, useProgressStore, useCourseStore } from '../stores';
+import { useUserStore, useProgressStore } from '../stores';
 import { languageNames } from '../data/mockData';
 
 const containerVariants = {
@@ -33,7 +31,6 @@ export default function DashboardPage() {
   const navigate = useNavigate();
   const { user } = useUserStore();
   const { dailyGoal, todayMinutes, totalWordsLearned, totalLessonsCompleted, weeklyData } = useProgressStore();
-  const { enrolledCourses } = useCourseStore();
 
   const progressPercent = Math.round((todayMinutes / dailyGoal) * 100);
 
